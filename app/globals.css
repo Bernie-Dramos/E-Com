@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --forest-green: #2d5016;
+  --sage-green: #87a96b;
+  --earth-brown: #8b4513;
+  --warm-beige: #f5f5dc;
+  --moss-green: #8fbc8f;
+}
+
+@layer base {
+  body {
+    @apply bg-warm-beige text-gray-800;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-forest-green hover:bg-sage-green text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-sage-green hover:bg-forest-green text-white px-4 py-2 rounded-lg font-medium transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 transform hover:scale-105 hover:shadow-xl;
+  }
+
+  .nature-gradient {
+    @apply bg-gradient-to-br from-sage-green to-forest-green;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
